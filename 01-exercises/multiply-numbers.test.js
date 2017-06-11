@@ -11,3 +11,34 @@
         3. Refactor if needed
         4. REPEAT
  */
+
+
+
+function multiplies() {
+    var args = Array.prototype.slice.call(arguments);
+    var result = 1;
+    for (var i = 0; i < args.length; i++) {
+        result *= args[i];
+    }
+    return result;
+}
+
+
+test(' should return number when two numbers are multiplied', function(){
+    var result = multiplies(1, 2);
+    expect(result).toEqual(2);
+});
+
+
+test(' should return number when numbers are multiplied', function(){
+    var result = multiplies(2,4);
+    expect(result).toEqual(8);
+    
+});
+
+
+test(' should return number when  numbers are multiplied', function(){
+    var result = multiplies(2,2,3);
+    expect(result).toEqual(12);
+});
+

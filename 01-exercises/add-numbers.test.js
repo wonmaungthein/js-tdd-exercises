@@ -12,31 +12,42 @@
  *      - Check JEST documentation and use methods other than toBe()
  */
 
-function add(numbers) {
-    
-
-
-
-
-    return result;
-}
-
+// function add() {
+//     // this line converts whatever is passed to the function into an array
+//     // read more here - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+//     var args = Array.prototype.slice.call(arguments);
+//     var result = 0;
+//     for (var i = 0; i < args.length; i++) {
+//         result += args[i];
+//     }
+//     return result;
+// }
 
 function add() {
-    // this line converts whatever is passed to the function into an array
-    // read more here - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
     var args = Array.prototype.slice.call(arguments);
     var result = 0;
-    for(var i = 0; i< args.length; i++){
+    for (var i = 0; i < args.length; i++) {
         result += args[i];
     }
     return result;
 }
 
-/*
-This is a sample test - remove it and write AT LEAST two more tests to prove the function works as expected  
 test('add should add two numbers', function(){
     var result = add(1, 2);
     expect(result).toEqual(3);
 });
-*/
+
+test ("should return numbers when adding 2,1,3", function(){
+    var result = add (2,1,3);
+    expect(result).toEqual(6);
+});
+
+test (" should return the result when I use only one number", function(){
+var result = add (2);
+expect (result). toEqual(2);
+});
+
+test ("should return the result when I have no numbers", function(){
+    var result = add(0);
+    expect (result). toEqual(0);
+});
