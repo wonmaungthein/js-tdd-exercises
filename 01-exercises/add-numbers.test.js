@@ -10,8 +10,17 @@
  *          - Improve the function to handle this case
  *      - Any more Edge cases?
  *      - Check JEST documentation and use methods other than toBe()
- * 
  */
+
+function add(numbers) {
+    
+
+
+
+
+    return result;
+}
+
 
 function add() {
     // this line converts whatever is passed to the function into an array

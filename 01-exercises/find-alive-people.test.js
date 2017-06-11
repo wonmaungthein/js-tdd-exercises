@@ -66,6 +66,11 @@ test('function should retrieve only alive writers', function () {
 });
 
 
+
+
+
+
+
 test('function should return an empty list if there are no alive writers', function () {
   var persons = [
     {
@@ -101,13 +106,6 @@ test('function should return an empty list if there are no alive writers', funct
   var result = findAlive(persons);
   expect(result).toEqual([]);
 });
-
-
-
-
-
-
-
 
 
 
