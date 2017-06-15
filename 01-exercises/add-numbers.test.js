@@ -32,6 +32,11 @@ function add() {
     return result;
 }
 
+test ('return numbers when adding 5 numbers', function(){
+    var result = add ( 2, 5, 6, 8, 3);
+    expect (result).toEqual(24);
+});
+
 test('add should add two numbers', function(){
     var result = add(1, 2);
     expect(result).toEqual(3);

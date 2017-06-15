@@ -22,7 +22,7 @@ function shortcut(word) {
     var result = '';
     for (var i = 0; i < word.length; i++) {
         if (word[i] !== 'o' && word[i] !== 'e' && word[i] !== 'i'
-            && word[i] !== 'a' && word[i] !== 'u') {
+            && word[i] !== 'a' && word[i] !== 'u' && word[i] !== 'O'&& word[i] !== 'E' && word[i] !== 'I' && word[i] !== 'A' && word[i] !== 'U') {
             result = result + word[i];
         }
     }  
@@ -57,7 +57,7 @@ test('shortcut should remove the Os', function(){
 
 
 test('shortcut should remove the Os', function(){
-    var result = shortcut('Hello');
+    var result = shortcut('HEllo');
     expect(result).toBe('Hll');
 });
 
